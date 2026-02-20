@@ -1,0 +1,142 @@
+{
+  "project_name": "Road to Jannah",
+  "theme": {
+    "name": "Noor Al-Qalb (Light of the Heart)",
+    "mode": "light",
+    "emotional_archetype": "Organic & Earthy (Trust, Growth, Calm)",
+    "colors": {
+      "primary": "#044735",
+      "primary_foreground": "#FFFFFF",
+      "secondary": "#F9F5EB",
+      "secondary_foreground": "#044735",
+      "accent": "#D4AF37",
+      "accent_foreground": "#FFFFFF",
+      "background": "#F9F5EB",
+      "foreground": "#1F2937",
+      "muted": "#E5E7EB",
+      "muted_foreground": "#6B7280",
+      "card": "#FFFFFF",
+      "card_foreground": "#1F2937",
+      "border": "#E5E7EB",
+      "input": "#FFFFFF",
+      "ring": "#044735",
+      "destructive": "#991B1B",
+      "destructive_foreground": "#FFFFFF"
+    },
+    "gradients": {
+      "hero_overlay": "linear-gradient(to bottom, rgba(4, 71, 53, 0.8), rgba(4, 71, 53, 0.4))",
+      "gold_shimmer": "linear-gradient(45deg, #D4AF37, #F2D06B, #D4AF37)"
+    },
+    "typography": {
+      "font_family_heading": "\"Playfair Display\", serif",
+      "font_family_body": "\"Inter\", sans-serif",
+      "font_family_arabic": "\"Amiri\", serif",
+      "scale": {
+        "h1": "text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight",
+        "h2": "text-3xl md:text-4xl font-semibold tracking-tight",
+        "h3": "text-2xl md:text-3xl font-medium",
+        "body": "text-base md:text-lg leading-relaxed",
+        "small": "text-sm text-muted-foreground",
+        "arabic_heading": "text-3xl md:text-4xl font-amiri",
+        "arabic_body": "text-lg md:text-xl font-amiri leading-loose"
+      }
+    },
+    "spacing": {
+      "container_padding": "p-4 md:p-8 lg:p-12",
+      "section_gap": "gap-8 md:gap-12 lg:gap-16",
+      "card_padding": "p-6 md:p-8"
+    },
+    "radius": {
+      "default": "rounded-lg",
+      "large": "rounded-xl",
+      "full": "rounded-full"
+    },
+    "shadows": {
+      "card": "shadow-sm hover:shadow-md transition-shadow duration-300",
+      "floating": "shadow-lg shadow-primary/10",
+      "inner": "shadow-inner"
+    }
+  },
+  "layout_strategies": {
+    "grid_system": {
+      "mobile": "grid-cols-1",
+      "tablet": "grid-cols-2",
+      "desktop": "grid-cols-3 lg:grid-cols-4",
+      "gap": "gap-6"
+    },
+    "containers": {
+      "max_width": "max-w-7xl mx-auto",
+      "padding_x": "px-4 md:px-8"
+    }
+  },
+  "components": {
+    "prayer_widget": {
+      "name": "The Timepiece",
+      "structure": "Grid of cards",
+      "style": "Glassmorphism or Solid Card with Gold Border for 'Next Prayer'",
+      "features": ["Current Prayer Highlight", "Countdown Timer", "Hijri Date"]
+    },
+    "announcement_banner": {
+      "name": "The Scroll",
+      "style": "Subtle marquee or dismissible top banner in Accent color",
+      "animation": "Slide down on load"
+    },
+    "donation_card": {
+      "name": "The Trust Box",
+      "style": "Clean card with copy-to-clipboard functionality",
+      "elements": ["QR Code", "IBAN", "Bank Name"]
+    },
+    "google_map": {
+      "style": "Custom styled map (if possible) or standard embed in a rounded container",
+      "aspect_ratio": "aspect-video or aspect-square on mobile"
+    },
+    "founder_section": {
+      "style": "Side-by-side layout (Image Left, Text Right on Desktop)",
+      "image_style": "rounded-xl shadow-lg object-cover"
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_bg": "https://images.pexels.com/photos/33015887/pexels-photo-33015887.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "ramadan_lantern": "https://images.pexels.com/photos/1652303/pexels-photo-1652303.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "founder": "https://customer-assets.emergentagent.com/job_road-to-jannah/artifacts/2syzy3fc_image.png",
+      "pattern_overlay": "opacity-5 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')]"
+    },
+    "icons": {
+      "library": "lucide-react",
+      "mapping": {
+        "prayer": "Clock",
+        "location": "MapPin",
+        "whatsapp": "MessageCircle",
+        "donate": "Heart",
+        "menu": "Menu",
+        "close": "X",
+        "copy": "Copy",
+        "check": "Check"
+      }
+    }
+  },
+  "animations": {
+    "transition": "transition-all duration-300 ease-in-out",
+    "hover_lift": "hover:-translate-y-1 hover:shadow-lg",
+    "fade_in": "animate-in fade-in zoom-in duration-500",
+    "slide_up": "animate-in slide-in-from-bottom duration-500"
+  },
+  "accessibility": {
+    "contrast_check": "Ensure Gold text is on Dark Green or Dark Gray, not on White. Use Dark Green text on Gold/Cream backgrounds.",
+    "focus_states": "focus:ring-2 focus:ring-primary focus:ring-offset-2",
+    "aria_labels": "Required for all icon-only buttons (e.g., WhatsApp, Copy IBAN)"
+  },
+  "universal_guidelines": [
+    "Use 'Playfair Display' for all Headings (h1-h3).",
+    "Use 'Inter' for Body text.",
+    "Use 'Amiri' for any Arabic text.",
+    "Primary Color #044735 is for backgrounds, buttons, and active states.",
+    "Secondary Color #F9F5EB is the page background.",
+    "Accent Color #D4AF37 is for borders, icons, and highlights.",
+    "Never use pure black; use #1F2937.",
+    "Ensure all images have alt text.",
+    "Mobile-first: Check layouts on 375px width.",
+    "RTL Support: Ensure layout works for Arabic (dir='rtl')."
+  ]
+}
