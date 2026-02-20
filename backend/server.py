@@ -337,8 +337,9 @@ async def get_announcements():
 async def submit_volunteer(data: VolunteerCreate):
     submission = VolunteerSubmission(**data.model_dump())
     doc = submission.model_dump()
+    volunteer_id = submission.id
     await db.volunteers.insert_one(doc)
-    return {"message": "Thank you for volunteering!", "id": submission.id}
+    return {"message": "Thank you for volunteering!", "id": volunteer_id}
 
 # ==================== ADMIN ENDPOINTS ====================
 
@@ -375,7 +376,9 @@ async def create_announcement(data: dict, admin: dict = Depends(get_current_admi
     )
     doc = announcement.model_dump()
     await db.announcements.insert_one(doc)
-    return doc
+    # Return fresh copy without _id
+    created = await db.announcements.find_one({"id": announcement.id}, {"_id": 0})
+    return created
 
 @api_router.put("/admin/announcements/{announcement_id}")
 async def update_announcement(announcement_id: str, data: dict, admin: dict = Depends(get_current_admin)):
