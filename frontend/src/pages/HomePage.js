@@ -127,6 +127,9 @@ const HomePage = ({ content, announcements }) => {
         </section>
       )}
 
+      {/* Masjid Gallery */}
+      <MasjidGallery content={content} />
+
       {/* Founder Section */}
       <FounderSection content={content} />
     </div>
