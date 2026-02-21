@@ -77,7 +77,7 @@ const JoinPage = ({ content }) => {
                   {t('join.group')}
                 </h3>
                 <p className="text-muted-foreground text-sm mb-6">
-                  Join our WhatsApp group for updates, discussions, and coordination
+                  {t('join.groupDesc')}
                 </p>
                 <a
                   href={content?.whatsapp_group_link || '#'}
@@ -86,7 +86,7 @@ const JoinPage = ({ content }) => {
                 >
                   <Button className="w-full bg-green-500 hover:bg-green-600 gap-2" data-testid="join-group-btn">
                     <MessageCircle className="h-4 w-4" />
-                    Join WhatsApp Group
+                    {t('join.joinGroup')}
                   </Button>
                 </a>
               </CardContent>
