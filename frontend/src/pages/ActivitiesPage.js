@@ -125,11 +125,10 @@ const ActivitiesPage = ({ content }) => {
           <Card className="border-accent/30 bg-card">
             <CardContent className="py-12 px-8">
               <h2 className="font-heading text-2xl md:text-3xl font-semibold text-foreground mb-4">
-                Join Our Learning Community
+                {t('activities.joinLearning')}
               </h2>
               <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-                Whether you're a beginner or advanced learner, our programs cater to all levels. 
-                Join us at Yazicizade Mosque and embark on your journey of Islamic knowledge.
+                {t('activities.joinLearningDesc')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
@@ -140,7 +139,7 @@ const ActivitiesPage = ({ content }) => {
                   data-testid="activities-whatsapp-btn"
                 >
                   <Users className="h-5 w-5" />
-                  Join WhatsApp Group
+                  {t('activities.joinWhatsApp')}
                 </a>
               </div>
             </CardContent>
