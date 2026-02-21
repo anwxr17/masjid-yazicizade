@@ -8,7 +8,7 @@ const LocationPage = ({ content }) => {
   const { t, getText } = useLanguage();
 
   const mapEmbedUrl = content?.google_maps_embed || 
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3258.8!2d33.3242!3d35.3394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDIwJzIxLjgiTiAzM8KwMTknMjcuMSJF!5e0!3m2!1sen!2s!4v1";
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d815.0!2d33.31775!3d35.34!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14de1762c7c33b79%3A0x7c9c5c10c8f8f8f8!2sYazicizade%20Mosque!5e0!3m2!1sen!2s!4v1";
 
   return (
     <div className="min-h-screen" data-testid="location-page">
@@ -68,7 +68,7 @@ const LocationPage = ({ content }) => {
                   </address>
                   
                   <a
-                    href={content?.google_maps_link || "https://www.google.com/maps/search/Yazicizade+Mosque+Girne"}
+                    href={content?.google_maps_link || "https://maps.app.goo.gl/ZL4Q32j5pYQ1gZGU8"}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
