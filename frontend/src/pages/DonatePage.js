@@ -54,7 +54,7 @@ const DonatePage = ({ content }) => {
           <Card className="border-accent/30" data-testid="bank-details">
             <CardHeader className="text-center border-b border-border">
               <CardTitle className="font-heading text-2xl text-foreground">
-                Bank Transfer Details
+                {t('donate.bankDetails')}
               </CardTitle>
             </CardHeader>
             <CardContent className="py-8 px-6 space-y-6">
@@ -64,7 +64,7 @@ const DonatePage = ({ content }) => {
                   <Building2 className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Bank Name</p>
+                  <p className="text-sm text-muted-foreground">{t('donate.bankName')}</p>
                   <p className="font-semibold text-foreground text-lg" data-testid="bank-name">
                     {content?.bank_name || 'Ziraat Bank'}
                   </p>
@@ -77,7 +77,7 @@ const DonatePage = ({ content }) => {
                   <User className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Account Name</p>
+                  <p className="text-sm text-muted-foreground">{t('donate.accountName')}</p>
                   <p className="font-semibold text-foreground text-lg" data-testid="account-name">
                     {content?.account_name || 'SALIH SAMIER S OTMAN'}
                   </p>
@@ -90,7 +90,7 @@ const DonatePage = ({ content }) => {
                   <CreditCard className="h-6 w-6 text-accent-foreground" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm text-muted-foreground">IBAN</p>
+                  <p className="text-sm text-muted-foreground">{t('donate.iban')}</p>
                   <p 
                     className="font-mono font-semibold text-foreground text-lg break-all"
                     data-testid="iban-display"
@@ -128,7 +128,7 @@ const DonatePage = ({ content }) => {
                     data-testid="donation-qr"
                   />
                   <p className="text-sm text-muted-foreground mt-2">
-                    Scan to copy IBAN
+                    {t('donate.scanQR')}
                   </p>
                 </div>
               )}
