@@ -77,7 +77,7 @@ const HeroSection = ({ content }) => {
               </Button>
             </a>
             <a 
-              href={content?.whatsapp_community_link || '#'}
+              href={content?.whatsapp_group_link || '#'}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -88,7 +88,7 @@ const HeroSection = ({ content }) => {
                 data-testid="hero-whatsapp-btn"
               >
                 <MessageCircle className="h-5 w-5" />
-                {t('home.joinWhatsApp')}
+                {t('join.group')}
               </Button>
             </a>
           </div>
