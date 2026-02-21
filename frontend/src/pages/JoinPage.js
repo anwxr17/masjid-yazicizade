@@ -111,14 +111,14 @@ const JoinPage = ({ content }) => {
                     {t('join.thankYou')}
                   </h3>
                   <p className="text-muted-foreground">
-                    We'll be in touch with you soon.
+                    {t('join.weWillContact')}
                   </p>
                   <Button 
                     variant="outline" 
                     className="mt-6"
                     onClick={() => setSubmitted(false)}
                   >
-                    Submit Another
+                    {t('join.submitAnother')}
                   </Button>
                 </div>
               ) : (
@@ -131,7 +131,7 @@ const JoinPage = ({ content }) => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      placeholder="Enter your full name"
+                      placeholder={t('join.namePlaceholder')}
                       data-testid="volunteer-name"
                     />
                   </div>
@@ -145,7 +145,7 @@ const JoinPage = ({ content }) => {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      placeholder="+90 XXX XXX XXXX"
+                      placeholder={t('join.phonePlaceholder')}
                       data-testid="volunteer-phone"
                     />
                   </div>
