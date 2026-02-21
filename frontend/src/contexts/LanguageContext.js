@@ -75,9 +75,11 @@ const translations = {
       availability: 'Availability',
       availabilityPlaceholder: 'e.g., Weekends, After Maghrib...',
       submit: 'Submit',
+      submitting: 'Submitting...',
       thankYou: 'Thank you for volunteering!',
       weWillContact: "We'll be in touch with you soon.",
-      submitAnother: 'Submit Another'
+      submitAnother: 'Submit Another',
+      submitError: 'Failed to submit. Please try again.'
     },
     donate: {
       title: 'Support roadtojannah',
@@ -85,6 +87,7 @@ const translations = {
       bankDetails: 'Bank Transfer Details',
       bankName: 'Bank Name',
       accountName: 'Account Name',
+      iban: 'IBAN',
       copyIBAN: 'Copy IBAN',
       copied: 'Copied!',
       scanQR: 'Scan to copy IBAN',
