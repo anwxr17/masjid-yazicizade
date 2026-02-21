@@ -3,6 +3,7 @@ import HeroSection from '../components/home/HeroSection';
 import PrayerWidget from '../components/home/PrayerWidget';
 import AnnouncementBanner from '../components/home/AnnouncementBanner';
 import FounderSection from '../components/home/FounderSection';
+import MasjidGallery from '../components/home/MasjidGallery';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Card, CardContent } from '../components/ui/card';
 import { Link } from 'react-router-dom';
