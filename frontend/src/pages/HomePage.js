@@ -41,7 +41,7 @@ const HomePage = ({ content, announcements }) => {
             {/* Quick Links */}
             <div className="space-y-4 animate-slide-up animation-delay-150">
               <h2 className="font-heading text-2xl md:text-3xl text-foreground font-semibold mb-6">
-                Explore
+                {t('home.explore')}
               </h2>
               <div className="grid grid-cols-2 gap-4">
                 {features.map((feature, index) => (
@@ -70,7 +70,7 @@ const HomePage = ({ content, announcements }) => {
                     </div>
                     <div className="flex-1">
                       <h3 className="font-semibold text-foreground">{t('join.group')}</h3>
-                      <p className="text-sm text-muted-foreground">Stay connected with the community</p>
+                      <p className="text-sm text-muted-foreground">{t('home.stayConnected')}</p>
                     </div>
                     <a 
                       href={content?.whatsapp_group_link || '#'}
@@ -78,7 +78,7 @@ const HomePage = ({ content, announcements }) => {
                       rel="noopener noreferrer"
                     >
                       <Button size="sm" className="bg-green-500 hover:bg-green-600" data-testid="home-whatsapp-cta">
-                        Join
+                        {t('home.join')}
                       </Button>
                     </a>
                   </div>
