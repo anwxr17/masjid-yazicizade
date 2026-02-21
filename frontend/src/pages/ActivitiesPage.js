@@ -133,14 +133,14 @@ const ActivitiesPage = ({ content }) => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href={content?.whatsapp_community_link || '#'}
+                  href={content?.whatsapp_group_link || '#'}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors font-medium"
                   data-testid="activities-whatsapp-btn"
                 >
                   <Users className="h-5 w-5" />
-                  Join WhatsApp Community
+                  Join WhatsApp Group
                 </a>
               </div>
             </CardContent>
