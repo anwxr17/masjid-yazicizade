@@ -32,7 +32,7 @@ const JoinPage = ({ content }) => {
       setSubmitted(true);
       setFormData({ name: '', phone: '', skills: '', availability: '' });
     } catch (err) {
-      setError('Failed to submit. Please try again.');
+      setError(t('join.submitError'));
     } finally {
       setSubmitting(false);
     }
@@ -157,7 +157,7 @@ const JoinPage = ({ content }) => {
                       name="skills"
                       value={formData.skills}
                       onChange={handleChange}
-                      placeholder="e.g., Teaching Quran, Event organizing, Social media..."
+                      placeholder={t('join.skillsPlaceholder')}
                       rows={3}
                       data-testid="volunteer-skills"
                     />
@@ -170,7 +170,7 @@ const JoinPage = ({ content }) => {
                       name="availability"
                       value={formData.availability}
                       onChange={handleChange}
-                      placeholder="e.g., Weekends, After Maghrib..."
+                      placeholder={t('join.availabilityPlaceholder')}
                       data-testid="volunteer-availability"
                     />
                   </div>
