@@ -44,7 +44,6 @@ const translations = {
     join: {
       title: 'Join Our Community',
       subtitle: 'Be part of the roadtojannah family',
-      community: 'WhatsApp Community',
       group: 'WhatsApp Group',
       volunteer: 'Volunteer With Us',
       name: 'Your Name',
@@ -98,7 +97,7 @@ const translations = {
     home: {
       viewSchedule: 'عرض الجدول',
       getDirections: 'احصل على الاتجاهات',
-      joinWhatsApp: 'انضم لمجتمع الواتساب',
+      joinWhatsApp: 'انضم لمجموعة الواتساب',
       tonight: 'صلاة الليلة',
       isha: 'صلاة العشاء',
       taraweeh: 'التراويح',
@@ -124,9 +123,8 @@ const translations = {
       subtitle: 'ننمو معًا في الإيمان والمعرفة'
     },
     join: {
-      title: 'انضم إلى مجتمعنا',
+      title: 'انضم إلى مجموعتنا',
       subtitle: 'كن جزءًا من عائلة الطريق إلى الجنة',
-      community: 'مجتمع الواتساب',
       group: 'مجموعة الواتساب',
       volunteer: 'تطوع معنا',
       name: 'اسمك',
@@ -180,7 +178,7 @@ const translations = {
     home: {
       viewSchedule: 'Programı Gör',
       getDirections: 'Yol Tarifi Al',
-      joinWhatsApp: 'WhatsApp Topluluğuna Katıl',
+      joinWhatsApp: 'WhatsApp Grubuna Katıl',
       tonight: 'Bu Geceki Namaz',
       isha: 'Yatsı Namazı',
       taraweeh: 'Teravih',
@@ -206,9 +204,8 @@ const translations = {
       subtitle: 'İman ve bilgide birlikte büyüyelim'
     },
     join: {
-      title: 'Topluluğumuza Katılın',
+      title: 'Grubumuza Katılın',
       subtitle: 'roadtojannah ailesinin bir parçası olun',
-      community: 'WhatsApp Topluluğu',
       group: 'WhatsApp Grubu',
       volunteer: 'Bizimle Gönüllü Olun',
       name: 'Adınız',
