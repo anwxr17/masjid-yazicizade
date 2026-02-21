@@ -79,7 +79,7 @@ const SchedulePage = ({ content }) => {
                   {getText(content?.taraweeh_note) || 'After Isha'}
                 </p>
                 <p className="text-sm text-muted-foreground mt-2">
-                  Throughout Ramadan
+                  {t('schedule.throughoutRamadan')}
                 </p>
               </CardContent>
             </Card>
@@ -98,7 +98,7 @@ const SchedulePage = ({ content }) => {
                     {content?.tahajjud_time || '3:00 AM'}
                   </p>
                   <p className="text-sm text-muted-foreground mt-2">
-                    In The Last 10 Days insha'Allah
+                    {t('schedule.lastTenDays')}
                   </p>
                 </CardContent>
               </Card>
