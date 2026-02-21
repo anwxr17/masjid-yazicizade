@@ -116,8 +116,8 @@ class SiteContent(BaseModel):
     # Masjid Info
     masjid_name: Translation = Field(default_factory=lambda: Translation(en="Yazicizade Mosque", ar="مسجد يازيجي زاده", tr="Yazicizade Camii"))
     masjid_address: Translation = Field(default_factory=lambda: Translation(en="88PF+64G, Namık Kemal Cd, Girne 99300", ar="88PF+64G، شارع نامق كمال، كيرينيا 99300", tr="88PF+64G, Namık Kemal Cd, Girne 99300"))
-    google_maps_link: str = "https://www.google.com/maps/place/Yazicizade+Mosque/@35.3394,33.3242,17z"
-    google_maps_embed: str = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3258.8!2d33.3242!3d35.3394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDIwJzIxLjgiTiAzM8KwMTknMjcuMSJF!5e0!3m2!1sen!2s!4v1"
+    google_maps_link: str = "https://maps.app.goo.gl/ZL4Q32j5pYQ1gZGU8"
+    google_maps_embed: str = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d815.0!2d33.31775!3d35.34!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14de1762c7c33b79%3A0x7c9c5c10c8f8f8f8!2sYazicizade%20Mosque!5e0!3m2!1sen!2s!4v1"
     parking_notes: Translation = Field(default_factory=lambda: Translation(en="Free parking available on the street and nearby lots.", ar="مواقف مجانية متوفرة في الشارع والمواقف القريبة.", tr="Sokakta ve yakın alanlarda ücretsiz park yeri mevcuttur."))
     accessibility_notes: Translation = Field(default_factory=lambda: Translation(en="The mosque is accessible with ramps for wheelchair users.", ar="المسجد متاح مع منحدرات لمستخدمي الكراسي المتحركة.", tr="Cami tekerlekli sandalye kullanıcıları için rampalarla erişilebilir."))
     masjid_image: str = ""
