@@ -94,7 +94,7 @@ const HomePage = ({ content, announcements }) => {
         <section className="py-16 md:py-24 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <h2 className="font-heading text-3xl md:text-4xl text-foreground font-semibold text-center mb-12">
-              Latest Updates
+              {t('home.latestUpdates')}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {announcements.filter(a => !a.is_banner && a.is_active).slice(0, 3).map((announcement) => (
