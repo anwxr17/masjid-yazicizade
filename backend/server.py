@@ -74,6 +74,12 @@ class Last10Night(BaseModel):
     program: Translation = Field(default_factory=lambda: Translation(en="", ar="", tr=""))
     special_activities: Translation = Field(default_factory=lambda: Translation(en="", ar="", tr=""))
 
+class GalleryImage(BaseModel):
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    url: str = ""
+    caption: Translation = Field(default_factory=lambda: Translation(en="", ar="", tr=""))
+    order: int = 0
+
 class Announcement(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     title: Translation = Field(default_factory=lambda: Translation(en="", ar="", tr=""))
