@@ -24,15 +24,14 @@ const FounderSection = ({ content }) => {
           <CardContent className="p-0">
             <div className="grid md:grid-cols-2 gap-0">
               {/* Image */}
-              <div className="relative h-80 md:h-auto min-h-[350px]">
+              <div className="relative flex items-center justify-center p-8 bg-muted/30 min-h-[350px]">
                 <img
                   src={founderImage}
                   alt={content?.founder_name || "Anwar Abdulkadir"}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="w-64 h-64 md:w-72 md:h-72 rounded-xl object-cover shadow-lg"
                   style={{ objectPosition: '50% 25%' }}
                   data-testid="founder-image"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent md:hidden" />
               </div>
 
               {/* Content */}
