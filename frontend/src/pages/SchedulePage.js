@@ -121,7 +121,7 @@ const SchedulePage = ({ content }) => {
             <h2 className="font-heading text-3xl md:text-4xl text-foreground font-semibold">
               {t('schedule.last10')}
             </h2>
-            <p className="text-muted-foreground mt-2">Special programs during the blessed final nights</p>
+            <p className="text-muted-foreground mt-2">{t('schedule.subtitle')}</p>
           </div>
 
           {content?.last_10_nights && content.last_10_nights.length > 0 ? (
@@ -135,7 +135,7 @@ const SchedulePage = ({ content }) => {
                   <CardHeader className="pb-2">
                     <CardTitle className="text-center">
                       <span className="text-3xl font-heading text-primary">{night.night_number}</span>
-                      <span className="text-sm text-muted-foreground block">Night</span>
+                      <span className="text-sm text-muted-foreground block">{t('schedule.special')}</span>
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="text-center space-y-2">
@@ -154,11 +154,10 @@ const SchedulePage = ({ content }) => {
               <CardContent className="py-12 text-center">
                 <Star className="h-12 w-12 text-accent mx-auto mb-4" />
                 <h3 className="font-heading text-xl font-semibold text-foreground mb-2">
-                  Special Programs Coming Soon
+                  {t('schedule.specialPrograms')}
                 </h3>
                 <p className="text-muted-foreground">
-                  The Last 10 Nights schedule will be announced as Ramadan progresses.
-                  <br />Join our WhatsApp community for updates.
+                  {t('schedule.specialProgramsDesc')}
                 </p>
               </CardContent>
             </Card>
@@ -172,24 +171,24 @@ const SchedulePage = ({ content }) => {
           <Card className="border-accent/30">
             <CardContent className="py-8 px-6 text-center">
               <h3 className="font-heading text-xl font-semibold text-foreground mb-4">
-                Important Information
+                {t('schedule.importantInfo')}
               </h3>
               <ul className="text-muted-foreground space-y-2 text-left max-w-lg mx-auto">
                 <li className="flex items-start gap-2">
                   <span className="text-accent">•</span>
-                  Taraweeh is performed in congregation immediately after Isha prayer
+                  {t('schedule.info1')}
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent">•</span>
-                  Tahajjud/Qiyam programs are held on selected nights
+                  {t('schedule.info2')}
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent">•</span>
-                  Please arrive 10-15 minutes early for prayer
+                  {t('schedule.info3')}
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent">•</span>
-                  Bring your own prayer mat if possible
+                  {t('schedule.info4')}
                 </li>
               </ul>
             </CardContent>
