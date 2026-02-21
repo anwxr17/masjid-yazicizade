@@ -63,55 +63,30 @@ const JoinPage = ({ content }) => {
         </div>
       </section>
 
-      {/* WhatsApp Links */}
+      {/* WhatsApp Group */}
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-16">
-            {/* Community */}
-            <Card className="hover-lift border-green-200 dark:border-green-900" data-testid="whatsapp-community-card">
+          <div className="max-w-md mx-auto mb-16">
+            {/* Group */}
+            <Card className="hover-lift border-green-200 dark:border-green-900" data-testid="whatsapp-group-card">
               <CardContent className="pt-8 pb-6 px-6 text-center">
                 <div className="w-16 h-16 rounded-full bg-green-500 flex items-center justify-center mx-auto mb-4">
                   <MessageCircle className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="font-heading text-xl font-semibold text-foreground mb-2">
-                  {t('join.community')}
-                </h3>
-                <p className="text-muted-foreground text-sm mb-6">
-                  Get announcements, updates, and connect with the broader community
-                </p>
-                <a
-                  href={content?.whatsapp_community_link || '#'}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button className="w-full bg-green-500 hover:bg-green-600 gap-2" data-testid="join-community-btn">
-                    <MessageCircle className="h-4 w-4" />
-                    Join Community
-                  </Button>
-                </a>
-              </CardContent>
-            </Card>
-
-            {/* Group */}
-            <Card className="hover-lift border-green-200 dark:border-green-900" data-testid="whatsapp-group-card">
-              <CardContent className="pt-8 pb-6 px-6 text-center">
-                <div className="w-16 h-16 rounded-full bg-green-600 flex items-center justify-center mx-auto mb-4">
-                  <Users className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="font-heading text-xl font-semibold text-foreground mb-2">
                   {t('join.group')}
                 </h3>
                 <p className="text-muted-foreground text-sm mb-6">
-                  Join the active group for discussions and coordination
+                  Join our WhatsApp group for updates, discussions, and coordination
                 </p>
                 <a
                   href={content?.whatsapp_group_link || '#'}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Button className="w-full bg-green-600 hover:bg-green-700 gap-2" data-testid="join-group-btn">
-                    <Users className="h-4 w-4" />
-                    Join Group
+                  <Button className="w-full bg-green-500 hover:bg-green-600 gap-2" data-testid="join-group-btn">
+                    <MessageCircle className="h-4 w-4" />
+                    Join WhatsApp Group
                   </Button>
                 </a>
               </CardContent>
