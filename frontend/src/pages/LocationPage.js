@@ -64,7 +64,7 @@ const LocationPage = ({ content }) => {
                   <address className="not-italic text-foreground leading-relaxed">
                     {getText(content?.masjid_address) || "88PF+64G, Namık Kemal Cd, Girne 99300"}
                     <br />
-                    <span className="text-muted-foreground">Girne, Northern Cyprus</span>
+                    <span className="text-muted-foreground">{t('location.city')}</span>
                   </address>
                   
                   <a
