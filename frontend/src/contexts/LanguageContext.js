@@ -193,9 +193,11 @@ const translations = {
       availability: 'التوفر',
       availabilityPlaceholder: 'مثال: عطلة نهاية الأسبوع، بعد المغرب...',
       submit: 'إرسال',
+      submitting: 'جارٍ الإرسال...',
       thankYou: 'شكرًا لتطوعك!',
       weWillContact: 'سنتواصل معك قريبًا.',
-      submitAnother: 'إرسال آخر'
+      submitAnother: 'إرسال آخر',
+      submitError: 'فشل الإرسال. يرجى المحاولة مرة أخرى.'
     },
     donate: {
       title: 'ادعم الطريق إلى الجنة',
@@ -203,6 +205,7 @@ const translations = {
       bankDetails: 'تفاصيل التحويل البنكي',
       bankName: 'اسم البنك',
       accountName: 'اسم الحساب',
+      iban: 'رقم الآيبان',
       copyIBAN: 'نسخ IBAN',
       copied: 'تم النسخ!',
       scanQR: 'امسح لنسخ IBAN',
