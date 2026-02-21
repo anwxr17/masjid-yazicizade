@@ -85,7 +85,7 @@ const Footer = ({ content }) => {
             </h3>
             <div className="flex flex-col gap-3">
               <a
-                href={content?.whatsapp_community_link || "#"}
+                href={content?.whatsapp_group_link || "#"}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="footer-whatsapp-btn"
@@ -96,7 +96,7 @@ const Footer = ({ content }) => {
                   className="w-full border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 gap-2"
                 >
                   <MessageCircle className="h-4 w-4" />
-                  {t('join.community')}
+                  {t('join.group')}
                 </Button>
               </a>
               {content?.founder_instagram && (
