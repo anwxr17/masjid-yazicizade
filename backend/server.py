@@ -117,7 +117,7 @@ class SiteContent(BaseModel):
     masjid_name: Translation = Field(default_factory=lambda: Translation(en="Yazicizade Mosque", ar="مسجد يازيجي زاده", tr="Yazicizade Camii"))
     masjid_address: Translation = Field(default_factory=lambda: Translation(en="88PF+64G, Namık Kemal Cd, Girne 99300", ar="88PF+64G، شارع نامق كمال، كيرينيا 99300", tr="88PF+64G, Namık Kemal Cd, Girne 99300"))
     google_maps_link: str = "https://maps.app.goo.gl/ZL4Q32j5pYQ1gZGU8"
-    google_maps_embed: str = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d815.0!2d33.31775!3d35.34!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14de1762c7c33b79%3A0x7c9c5c10c8f8f8f8!2sYazicizade%20Mosque!5e0!3m2!1sen!2s!4v1"
+    google_maps_embed: str = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13019.082254259594!2d33.31958053383791!3d35.33651854886365!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14de6ccbd1284c33%3A0xf6379d9852455d5c!2sYazicizade%20Mosque!5e0!3m2!1sen!2s!4v1771690889627!5m2!1sen!2s"
     parking_notes: Translation = Field(default_factory=lambda: Translation(en="Free parking available on the street and nearby lots.", ar="مواقف مجانية متوفرة في الشارع والمواقف القريبة.", tr="Sokakta ve yakın alanlarda ücretsiz park yeri mevcuttur."))
     accessibility_notes: Translation = Field(default_factory=lambda: Translation(en="The mosque is accessible with ramps for wheelchair users.", ar="المسجد متاح مع منحدرات لمستخدمي الكراسي المتحركة.", tr="Cami tekerlekli sandalye kullanıcıları için rampalarla erişilebilir."))
     masjid_image: str = ""
