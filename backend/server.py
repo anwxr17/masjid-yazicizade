@@ -224,6 +224,35 @@ class SiteContent(BaseModel):
         )
     ])
     
+    # Masjid Gallery
+    gallery_images: List[GalleryImage] = Field(default_factory=lambda: [
+        GalleryImage(
+            url="https://customer-assets.emergentagent.com/job_road-to-jannah/artifacts/33u2umey_image.png",
+            caption=Translation(en="Yazicizade Mosque - Exterior View", ar="مسجد يازيجي زاده - المنظر الخارجي", tr="Yazicizade Camii - Dış Görünüm"),
+            order=1
+        ),
+        GalleryImage(
+            url="https://customer-assets.emergentagent.com/job_road-to-jannah/artifacts/xiyc2znk_image.png",
+            caption=Translation(en="Beautiful Mihrab Interior", ar="المحراب الجميل من الداخل", tr="Güzel Mihrap İç Mekanı"),
+            order=2
+        ),
+        GalleryImage(
+            url="https://customer-assets.emergentagent.com/job_road-to-jannah/artifacts/hixi6lu7_image.png",
+            caption=Translation(en="Masjid Minaret at Night", ar="مئذنة المسجد في الليل", tr="Gece Cami Minaresi"),
+            order=3
+        ),
+        GalleryImage(
+            url="https://customer-assets.emergentagent.com/job_road-to-jannah/artifacts/q2re1elg_image.png",
+            caption=Translation(en="Prayer Hall with Minbar", ar="قاعة الصلاة مع المنبر", tr="Minberli Namaz Salonu"),
+            order=4
+        )
+    ])
+    gallery_title: Translation = Field(default_factory=lambda: Translation(
+        en="Our Masjid",
+        ar="مسجدنا",
+        tr="Camimiz"
+    ))
+    
     # Schedule
     schedule_days: List[ScheduleDay] = Field(default_factory=list)
     last_10_nights: List[Last10Night] = Field(default_factory=list)
