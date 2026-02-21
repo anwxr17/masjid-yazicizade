@@ -5,7 +5,7 @@ from datetime import datetime
 
 class RoadToJannahAPITester:
     def __init__(self):
-        self.base_url = "https://road-to-jannah.preview.emergentagent.com/api"
+        self.base_url = "https://prayer-times-hub-4.preview.emergentagent.com/api"
         self.token = None
         self.tests_run = 0
         self.tests_passed = 0
