@@ -69,7 +69,7 @@ const FounderSection = ({ content }) => {
                         data-testid="founder-phone"
                       >
                         <Phone className="h-4 w-4" />
-                        {content.founder_phone}
+                        <span dir="ltr">{content.founder_phone}</span>
                       </a>
                     )}
                     {content?.founder_email && (
@@ -79,7 +79,7 @@ const FounderSection = ({ content }) => {
                         data-testid="founder-email"
                       >
                         <Mail className="h-4 w-4" />
-                        {content.founder_email}
+                        <span dir="ltr">{content.founder_email}</span>
                       </a>
                     )}
                     {content?.founder_instagram && (
@@ -91,7 +91,7 @@ const FounderSection = ({ content }) => {
                         data-testid="founder-instagram"
                       >
                         <Instagram className="h-4 w-4" />
-                        {content.founder_instagram}
+                        <span dir="ltr">{content.founder_instagram}</span>
                       </a>
                     )}
                   </div>

@@ -108,7 +108,7 @@ const Footer = ({ content }) => {
                   data-testid="footer-instagram-link"
                 >
                   <Instagram className="h-4 w-4" />
-                  {content.founder_instagram}
+                  <span dir="ltr">{content.founder_instagram}</span>
                 </a>
               )}
             </div>
