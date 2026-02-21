@@ -4,12 +4,12 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import { Button } from '../ui/button';
 
 const MasjidGallery = ({ content }) => {
-  const { getText } = useLanguage();
+  const { t, getText } = useLanguage();
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = content?.gallery_images || [];
-  const galleryTitle = getText(content?.gallery_title) || "Our Masjid";
+  const galleryTitle = getText(content?.gallery_title) || t('gallery.title');
 
   if (images.length === 0) return null;
 
