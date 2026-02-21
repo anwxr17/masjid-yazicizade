@@ -186,7 +186,7 @@ const JoinPage = ({ content }) => {
                     data-testid="volunteer-submit"
                   >
                     {submitting ? (
-                      'Submitting...'
+                      t('join.submitting')
                     ) : (
                       <>
                         <Send className="h-4 w-4" />
