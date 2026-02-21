@@ -28,7 +28,8 @@ const FounderSection = ({ content }) => {
                 <img
                   src={founderImage}
                   alt={content?.founder_name || "Anwar Abdulkadir"}
-                  className="absolute inset-0 w-full h-full object-cover object-top"
+                  className="absolute inset-0 w-full h-full object-cover object-center"
+                  style={{ objectPosition: '50% 30%' }}
                   data-testid="founder-image"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent md:bg-gradient-to-r" />

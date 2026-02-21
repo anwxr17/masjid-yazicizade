@@ -98,7 +98,7 @@ const SchedulePage = ({ content }) => {
                     {content?.tahajjud_time || '3:00 AM'}
                   </p>
                   <p className="text-sm text-muted-foreground mt-2">
-                    Selected Nights
+                    In The Last 10 Days insha'Allah
                   </p>
                 </CardContent>
               </Card>
