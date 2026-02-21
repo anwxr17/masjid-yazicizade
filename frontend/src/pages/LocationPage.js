@@ -105,21 +105,6 @@ const LocationPage = ({ content }) => {
                   </p>
                 </CardContent>
               </Card>
-
-              {/* Accessibility Info */}
-              <Card data-testid="accessibility-info">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-foreground text-lg">
-                    <Accessibility className="h-5 w-5 text-accent" />
-                    {t('location.accessibility')}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    {getText(content?.accessibility_notes) || "The mosque is accessible with ramps for wheelchair users."}
-                  </p>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>
