@@ -376,28 +376,117 @@ const AdminDashboard = ({ content, setContent, announcements, setAnnouncements, 
             {/* WhatsApp Links */}
             <Card>
               <CardHeader>
-                <CardTitle>WhatsApp Links</CardTitle>
+                <CardTitle>WhatsApp Group Link</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label>Community Link</Label>
-                    <Input
-                      value={localContent.whatsapp_community_link || ''}
-                      onChange={(e) => setLocalContent(prev => ({ ...prev, whatsapp_community_link: e.target.value }))}
-                      placeholder="https://chat.whatsapp.com/..."
-                      data-testid="whatsapp-community-input"
-                    />
+                <div className="space-y-2">
+                  <Label>WhatsApp Group Link</Label>
+                  <Input
+                    value={localContent.whatsapp_group_link || ''}
+                    onChange={(e) => setLocalContent(prev => ({ ...prev, whatsapp_group_link: e.target.value }))}
+                    placeholder="https://chat.whatsapp.com/..."
+                    data-testid="whatsapp-group-input"
+                  />
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Masjid Gallery */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <ImageIcon className="h-5 w-5" />
+                  Masjid Gallery
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="grid md:grid-cols-3 gap-4">
+                  {['en', 'ar', 'tr'].map(lang => (
+                    <div key={lang} className="space-y-2">
+                      <Label>Gallery Title ({lang.toUpperCase()})</Label>
+                      <Input
+                        value={localContent.gallery_title?.[lang] || ''}
+                        onChange={(e) => updateNestedContent('gallery_title', lang, e.target.value)}
+                      />
+                    </div>
+                  ))}
+                </div>
+                
+                <Separator />
+                
+                <div className="space-y-4">
+                  <Label>Gallery Images</Label>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {(localContent.gallery_images || []).map((image, index) => (
+                      <div key={image.id || index} className="relative group">
+                        <img
+                          src={image.url}
+                          alt={`Gallery ${index + 1}`}
+                          className="w-full h-32 object-cover rounded-lg"
+                        />
+                        <Button
+                          variant="destructive"
+                          size="icon"
+                          className="absolute top-2 right-2 h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity"
+                          onClick={() => {
+                            const newImages = localContent.gallery_images.filter((_, i) => i !== index);
+                            setLocalContent(prev => ({ ...prev, gallery_images: newImages }));
+                          }}
+                        >
+                          <Trash2 className="h-4 w-4" />
+                        </Button>
+                        <Input
+                          className="mt-2 text-xs"
+                          placeholder="Caption (EN)"
+                          value={image.caption?.en || ''}
+                          onChange={(e) => {
+                            const newImages = [...(localContent.gallery_images || [])];
+                            newImages[index] = {
+                              ...newImages[index],
+                              caption: { ...newImages[index].caption, en: e.target.value }
+                            };
+                            setLocalContent(prev => ({ ...prev, gallery_images: newImages }));
+                          }}
+                        />
+                      </div>
+                    ))}
                   </div>
-                  <div className="space-y-2">
-                    <Label>Group Link</Label>
-                    <Input
-                      value={localContent.whatsapp_group_link || ''}
-                      onChange={(e) => setLocalContent(prev => ({ ...prev, whatsapp_group_link: e.target.value }))}
-                      placeholder="https://chat.whatsapp.com/..."
-                      data-testid="whatsapp-group-input"
-                    />
+                  
+                  <div className="flex gap-4 items-end">
+                    <div className="flex-1 space-y-2">
+                      <Label>Add New Image (URL)</Label>
+                      <Input
+                        id="new-gallery-url"
+                        placeholder="Paste image URL here..."
+                      />
+                    </div>
+                    <Button
+                      onClick={() => {
+                        const urlInput = document.getElementById('new-gallery-url');
+                        if (urlInput.value) {
+                          const newImage = {
+                            id: Date.now().toString(),
+                            url: urlInput.value,
+                            caption: { en: '', ar: '', tr: '' },
+                            order: (localContent.gallery_images?.length || 0) + 1
+                          };
+                          setLocalContent(prev => ({
+                            ...prev,
+                            gallery_images: [...(prev.gallery_images || []), newImage]
+                          }));
+                          urlInput.value = '';
+                        }
+                      }}
+                      className="gap-2"
+                    >
+                      <Plus className="h-4 w-4" />
+                      Add Image
+                    </Button>
                   </div>
+                  
+                  <p className="text-xs text-muted-foreground">
+                    Tip: Upload images via the Upload button or paste URLs directly. Click Save Changes to apply.
+                  </p>
                 </div>
               </CardContent>
             </Card>
