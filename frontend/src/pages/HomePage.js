@@ -68,11 +68,11 @@ const HomePage = ({ content, announcements }) => {
                       <MessageCircle className="h-6 w-6 text-white" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-semibold text-foreground">{t('join.community')}</h3>
+                      <h3 className="font-semibold text-foreground">{t('join.group')}</h3>
                       <p className="text-sm text-muted-foreground">Stay connected with the community</p>
                     </div>
                     <a 
-                      href={content?.whatsapp_community_link || '#'}
+                      href={content?.whatsapp_group_link || '#'}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
