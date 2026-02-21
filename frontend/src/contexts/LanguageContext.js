@@ -311,9 +311,11 @@ const translations = {
       availability: 'Uygunluk',
       availabilityPlaceholder: 'Örn: Hafta sonları, Akşam namazından sonra...',
       submit: 'Gönder',
+      submitting: 'Gönderiliyor...',
       thankYou: 'Gönüllü olduğunuz için teşekkürler!',
       weWillContact: 'Sizinle yakında iletişime geçeceğiz.',
-      submitAnother: 'Başka Gönder'
+      submitAnother: 'Başka Gönder',
+      submitError: 'Gönderilemedi. Lütfen tekrar deneyin.'
     },
     donate: {
       title: "roadtojannah'ı Destekleyin",
@@ -321,6 +323,7 @@ const translations = {
       bankDetails: 'Banka Transfer Bilgileri',
       bankName: 'Banka Adı',
       accountName: 'Hesap Adı',
+      iban: 'IBAN',
       copyIBAN: 'IBAN Kopyala',
       copied: 'Kopyalandı!',
       scanQR: "IBAN'ı kopyalamak için tarayın",
