@@ -61,7 +61,7 @@ const SchedulePage = ({ content }) => {
                   {content?.isha_time || '8:30 PM'}
                 </p>
                 <p className="text-sm text-muted-foreground mt-2">
-                  Daily
+                  {t('schedule.dailyLabel')}
                 </p>
               </CardContent>
             </Card>
