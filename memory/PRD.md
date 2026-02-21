@@ -66,6 +66,8 @@ Build a modern, secure, mobile-first website for an Islamic Ramadan initiative c
 - ✅ Fixed internationalization - all hardcoded English text now properly translated
 - ✅ Added missing translations: Bank Name, Account Name, IBAN labels for AR/TR
 - ✅ Added submitting/error states with translations for volunteer form
+- ✅ Fixed RTL issues: Phone, email, Instagram now display correctly in Arabic mode (using dir="ltr" spans)
+- ✅ Updated Google Maps embed to show exact Yazicizade Mosque with marker and info popup
 
 ## Prioritized Backlog
 
