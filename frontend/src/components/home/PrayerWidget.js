@@ -82,7 +82,7 @@ const PrayerWidget = ({ content }) => {
         {content?.prayer_times_updated && (
           <div className="px-6 py-3 bg-muted/50 text-center">
             <p className="text-xs text-muted-foreground">
-              {t('home.lastUpdated')}: {formatDate(content.prayer_times_updated)}
+              {t('home.lastUpdated')}: <span dir="ltr">{formatDate(content.prayer_times_updated)}</span>
             </p>
           </div>
         )}
