@@ -57,7 +57,7 @@ const SchedulePage = ({ content }) => {
                 <h3 className="font-heading text-xl font-semibold text-foreground mb-2">
                   {t('home.isha')}
                 </h3>
-                <p className="text-3xl font-heading text-primary font-bold" dir="ltr">
+                <p className="text-3xl font-heading text-primary font-bold ltr-text">
                   {content?.isha_time || '8:30 PM'}
                 </p>
                 <p className="text-sm text-muted-foreground mt-2">
@@ -94,7 +94,7 @@ const SchedulePage = ({ content }) => {
                   <h3 className="font-heading text-xl font-semibold text-foreground mb-2">
                     {t('home.tahajjud')}
                   </h3>
-                  <p className="text-3xl font-heading text-primary font-bold" dir="ltr">
+                  <p className="text-3xl font-heading text-primary font-bold ltr-text">
                     {content?.tahajjud_time || '3:00 AM'}
                   </p>
                   <p className="text-sm text-muted-foreground mt-2">
@@ -108,7 +108,7 @@ const SchedulePage = ({ content }) => {
           {/* Last Updated */}
           {content?.prayer_times_updated && (
             <p className="text-center text-sm text-muted-foreground mt-8">
-              {t('home.lastUpdated')}: <span dir="ltr">{formatDate(content.prayer_times_updated)}</span>
+              {t('home.lastUpdated')}: <span className="ltr-text">{formatDate(content.prayer_times_updated)}</span>
             </p>
           )}
         </div>
