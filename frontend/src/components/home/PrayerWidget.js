@@ -71,9 +71,9 @@ const PrayerWidget = ({ content }) => {
                 </div>
                 <span className="font-medium text-foreground">{prayer.name}</span>
               </div>
-              <span className={`font-heading text-lg ${
+              <span className={`font-heading text-lg ltr-text ${
                 prayer.highlight ? 'text-accent font-semibold' : 'text-foreground'
-              }`} dir="ltr">
+              }`}>
                 {prayer.time}
               </span>
             </div>
@@ -82,7 +82,7 @@ const PrayerWidget = ({ content }) => {
         {content?.prayer_times_updated && (
           <div className="px-6 py-3 bg-muted/50 text-center">
             <p className="text-xs text-muted-foreground">
-              {t('home.lastUpdated')}: <span dir="ltr">{formatDate(content.prayer_times_updated)}</span>
+              {t('home.lastUpdated')}: <span className="ltr-text">{formatDate(content.prayer_times_updated)}</span>
             </p>
           </div>
         )}
