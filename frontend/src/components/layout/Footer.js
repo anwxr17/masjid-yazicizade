@@ -15,9 +15,11 @@ const Footer = ({ content }) => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center">
-                <span className="text-primary font-heading text-lg font-bold">ر</span>
-              </div>
+              <img 
+                src="https://static.prod-images.emergentagent.com/jobs/ba30d0f2-df1d-4802-8a15-10d3345f1077/images/c3832bf4697dac24bfcdc88fc5f126d8bff64518e1c99ca3b00b32e5c34dc42d.png" 
+                alt="Road to Jannah Logo" 
+                className="w-10 h-10 object-contain"
+              />
               <span className="font-heading text-2xl font-semibold">roadtojannah</span>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
