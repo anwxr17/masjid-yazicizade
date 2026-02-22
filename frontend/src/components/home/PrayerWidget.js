@@ -73,7 +73,7 @@ const PrayerWidget = ({ content }) => {
               </div>
               <span className={`font-heading text-lg ${
                 prayer.highlight ? 'text-accent font-semibold' : 'text-foreground'
-              }`}>
+              }`} dir="ltr">
                 {prayer.time}
               </span>
             </div>
