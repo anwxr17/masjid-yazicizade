@@ -117,6 +117,13 @@
     .text-gradient {
         @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
     }
+
+    /* Force LTR direction for numbers, times, emails, usernames etc in RTL layouts */
+    .ltr-text {
+        direction: ltr !important;
+        unicode-bidi: embed !important;
+        display: inline-block;
+    }
 }
 
 @layer utilities {
