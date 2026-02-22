@@ -42,9 +42,11 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             className="flex items-center gap-2 group"
             data-testid="nav-logo"
           >
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-heading text-lg">ر</span>
-            </div>
+            <img 
+              src="https://static.prod-images.emergentagent.com/jobs/ba30d0f2-df1d-4802-8a15-10d3345f1077/images/c3832bf4697dac24bfcdc88fc5f126d8bff64518e1c99ca3b00b32e5c34dc42d.png" 
+              alt="Road to Jannah Logo" 
+              className="w-10 h-10 object-contain"
+            />
             <span className="font-heading text-xl md:text-2xl text-primary font-semibold group-hover:text-accent transition-colors">
               roadtojannah
             </span>
