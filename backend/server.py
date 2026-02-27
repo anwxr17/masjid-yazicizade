@@ -158,8 +158,16 @@ class SiteContent(BaseModel):
     donation_qr_image: str = ""
     
     # Founder
-    founder_name: str = "Anwar Abdulkadir"
-    founder_alias: str = "Abu Eisa (أبو عيسى)"
+    founder_name: Translation = Field(default_factory=lambda: Translation(
+        en="Anwar Abdulkadir",
+        ar="أنور عبد القادر",
+        tr="Anwar Abdulkadir"
+    ))
+    founder_alias: Translation = Field(default_factory=lambda: Translation(
+        en="Abu Eisa (أبو عيسى)",
+        ar="أبو عيسى (Abu Eisa)",
+        tr="Abu Eisa (أبو عيسى)"
+    ))
     founder_title: Translation = Field(default_factory=lambda: Translation(
         en="Founder of roadtojannah Initiative",
         ar="مؤسس مبادرة الطريق إلى الجنة",
