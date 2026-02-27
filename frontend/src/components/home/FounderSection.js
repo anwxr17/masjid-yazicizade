@@ -27,7 +27,7 @@ const FounderSection = ({ content }) => {
               <div className="relative flex items-center justify-center p-8 bg-muted/30 min-h-[350px]">
                 <img
                   src={founderImage}
-                  alt={content?.founder_name || "Anwar Abdulkadir"}
+                  alt={getText(content?.founder_name) || "Anwar Abdulkadir"}
                   className="w-64 h-64 md:w-72 md:h-72 rounded-xl object-cover shadow-lg"
                   style={{ objectPosition: '50% 25%' }}
                   data-testid="founder-image"
@@ -44,10 +44,10 @@ const FounderSection = ({ content }) => {
                     className="font-heading text-2xl md:text-3xl text-foreground font-semibold"
                     data-testid="founder-name"
                   >
-                    {content?.founder_name || "Anwar Abdulkadir"}
+                    {getText(content?.founder_name) || "Anwar Abdulkadir"}
                   </h3>
                   <p className="text-muted-foreground font-arabic text-lg mt-1">
-                    {content?.founder_alias || "Abu Eisa (أبو عيسى)"}
+                    {getText(content?.founder_alias) || "Abu Eisa (أبو عيسى)"}
                   </p>
                 </div>
 
