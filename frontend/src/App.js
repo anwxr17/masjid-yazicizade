@@ -146,13 +146,17 @@ function AppContent() {
         <Route path="/admin" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={
           <ProtectedRoute>
-            <AdminDashboard 
-              content={content} 
-              setContent={setContent}
-              announcements={announcements}
-              setAnnouncements={setAnnouncements}
-              refreshContent={fetchContent}
-            />
+            <div className={darkMode ? 'dark' : ''}>
+              <AdminDashboard 
+                content={content} 
+                setContent={setContent}
+                announcements={announcements}
+                setAnnouncements={setAnnouncements}
+                refreshContent={fetchContent}
+                darkMode={darkMode}
+                setDarkMode={setDarkMode}
+              />
+            </div>
           </ProtectedRoute>
         } />
       </Routes>

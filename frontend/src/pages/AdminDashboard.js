@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
   LayoutDashboard, FileText, Bell, Users, LogOut, Save, 
-  Upload, Trash2, Plus, Check, X, Image as ImageIcon
+  Upload, Trash2, Plus, Check, X, Image as ImageIcon, Moon, Sun
 } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useAuth } from '../contexts/AuthContext';
@@ -18,7 +18,7 @@ import axios from 'axios';
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
-const AdminDashboard = ({ content, setContent, announcements, setAnnouncements, refreshContent }) => {
+const AdminDashboard = ({ content, setContent, announcements, setAnnouncements, refreshContent, darkMode, setDarkMode }) => {
   const { t } = useLanguage();
   const { admin, logout, getAuthHeaders } = useAuth();
   const navigate = useNavigate();
@@ -141,15 +141,30 @@ const AdminDashboard = ({ content, setContent, announcements, setAnnouncements, 
   };
 
   return (
-    <div className="min-h-screen bg-muted/30" data-testid="admin-dashboard">
+    <div className={`min-h-screen bg-background ${darkMode ? 'dark' : ''}`} data-testid="admin-dashboard">
+      <div className={darkMode ? 'dark' : ''}>
       {/* Header */}
       <header className="bg-card border-b border-border sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <LayoutDashboard className="h-6 w-6 text-primary" />
-            <h1 className="font-heading text-xl font-semibold">{t('admin.dashboard')}</h1>
+            <h1 className="font-heading text-xl font-semibold text-foreground">{t('admin.dashboard')}</h1>
           </div>
           <div className="flex items-center gap-4">
+            {/* Dark Mode Toggle */}
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => setDarkMode(!darkMode)}
+              className="rounded-full"
+              data-testid="admin-dark-mode-toggle"
+            >
+              {darkMode ? (
+                <Sun className="h-5 w-5 text-yellow-500" />
+              ) : (
+                <Moon className="h-5 w-5" />
+              )}
+            </Button>
             <span className="text-sm text-muted-foreground hidden md:block">
               {admin?.name || admin?.email}
             </span>
@@ -760,6 +775,7 @@ const AdminDashboard = ({ content, setContent, announcements, setAnnouncements, 
           </TabsContent>
         </Tabs>
       </main>
+      </div>
     </div>
   );
 };
