@@ -2,14 +2,15 @@ import React from 'react';
 import { Phone, Mail, Instagram } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { Card, CardContent } from '../ui/card';
+import founderDefault from '../../assets/images/founder.png';
 
 const FounderSection = ({ content }) => {
   const { t, getText } = useLanguage();
 
-  const founderImage = content?.founder_image || 'https://customer-assets.emergentagent.com/job_road-to-jannah/artifacts/2syzy3fc_image.png';
+  const founderImage = content?.founder_image || founderDefault;
 
   return (
-    <section 
+    <section
       className="py-16 md:py-24 bg-muted/30"
       data-testid="founder-section"
     >
@@ -40,7 +41,7 @@ const FounderSection = ({ content }) => {
                   <p className="text-accent font-medium mb-2">
                     {getText(content?.founder_title) || "Founder of roadtojannah Initiative"}
                   </p>
-                  <h3 
+                  <h3
                     className="font-heading text-2xl md:text-3xl text-foreground font-semibold"
                     data-testid="founder-name"
                   >
@@ -51,7 +52,7 @@ const FounderSection = ({ content }) => {
                   </p>
                 </div>
 
-                <p 
+                <p
                   className="text-foreground/80 leading-relaxed"
                   data-testid="founder-bio"
                 >

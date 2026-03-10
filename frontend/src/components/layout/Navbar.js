@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '../ui/dropdown-menu';
+import logo from '../../assets/images/logo.png';
 
 const Navbar = ({ darkMode, setDarkMode }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -37,14 +38,14 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="flex items-center gap-2 group"
             data-testid="nav-logo"
           >
-            <img 
-              src="https://static.prod-images.emergentagent.com/jobs/ba30d0f2-df1d-4802-8a15-10d3345f1077/images/c3832bf4697dac24bfcdc88fc5f126d8bff64518e1c99ca3b00b32e5c34dc42d.png" 
-              alt="Road to Jannah Logo" 
+            <img
+              src={logo}
+              alt="Road to Jannah Logo"
               className="w-10 h-10 object-contain"
             />
             <span className="font-heading text-xl md:text-2xl text-primary font-semibold group-hover:text-accent transition-colors">
@@ -59,11 +60,10 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 key={link.path}
                 to={link.path}
                 data-testid={`nav-link-${link.path.replace('/', '') || 'home'}`}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                  isActive(link.path)
-                    ? 'bg-primary text-primary-foreground'
-                    : 'text-foreground/80 hover:bg-primary/10 hover:text-primary'
-                }`}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${isActive(link.path)
+                  ? 'bg-primary text-primary-foreground'
+                  : 'text-foreground/80 hover:bg-primary/10 hover:text-primary'
+                  }`}
               >
                 {link.label}
               </Link>
@@ -75,9 +75,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             {/* Language Switcher */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button 
-                  variant="ghost" 
-                  size="icon" 
+                <Button
+                  variant="ghost"
+                  size="icon"
                   className="h-9 w-9"
                   data-testid="language-switcher"
                 >
@@ -125,7 +125,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div 
+          <div
             className="lg:hidden py-4 border-t border-border/50 animate-slide-down"
             data-testid="mobile-menu"
           >
@@ -136,11 +136,10 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                   to={link.path}
                   onClick={() => setMobileMenuOpen(false)}
                   data-testid={`mobile-nav-${link.path.replace('/', '') || 'home'}`}
-                  className={`px-4 py-3 rounded-lg text-base font-medium transition-all ${
-                    isActive(link.path)
-                      ? 'bg-primary text-primary-foreground'
-                      : 'text-foreground/80 hover:bg-primary/10'
-                  }`}
+                  className={`px-4 py-3 rounded-lg text-base font-medium transition-all ${isActive(link.path)
+                    ? 'bg-primary text-primary-foreground'
+                    : 'text-foreground/80 hover:bg-primary/10'
+                    }`}
                 >
                   {link.label}
                 </Link>

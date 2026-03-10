@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { MapPin, Calendar, Heart, MessageCircle, Instagram, Mail, Phone } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { Button } from '../ui/button';
+import logo from '../../assets/images/logo.png';
 
 const Footer = ({ content }) => {
   const { t, getText } = useLanguage();
@@ -15,9 +16,9 @@ const Footer = ({ content }) => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <img 
-                src="https://static.prod-images.emergentagent.com/jobs/ba30d0f2-df1d-4802-8a15-10d3345f1077/images/c3832bf4697dac24bfcdc88fc5f126d8bff64518e1c99ca3b00b32e5c34dc42d.png" 
-                alt="Road to Jannah Logo" 
+              <img
+                src={logo}
+                alt="Road to Jannah Logo"
                 className="w-10 h-10 object-contain"
               />
               <span className="font-heading text-2xl font-semibold">roadtojannah</span>
@@ -33,24 +34,24 @@ const Footer = ({ content }) => {
               {t('footer.quickLinks')}
             </h3>
             <nav className="flex flex-col gap-2">
-              <Link 
-                to="/schedule" 
+              <Link
+                to="/schedule"
                 className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors"
                 data-testid="footer-schedule-link"
               >
                 <Calendar className="h-4 w-4" />
                 {t('nav.schedule')}
               </Link>
-              <Link 
-                to="/location" 
+              <Link
+                to="/location"
                 className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors"
                 data-testid="footer-location-link"
               >
                 <MapPin className="h-4 w-4" />
                 {t('nav.location')}
               </Link>
-              <Link 
-                to="/donate" 
+              <Link
+                to="/donate"
                 className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors"
                 data-testid="footer-donate-link"
               >
@@ -92,9 +93,9 @@ const Footer = ({ content }) => {
                 rel="noopener noreferrer"
                 data-testid="footer-whatsapp-btn"
               >
-                <Button 
-                  variant="outline" 
-                  size="sm" 
+                <Button
+                  variant="outline"
+                  size="sm"
                   className="w-full border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 gap-2"
                 >
                   <MessageCircle className="h-4 w-4" />
