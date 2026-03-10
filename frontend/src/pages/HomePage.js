@@ -46,7 +46,7 @@ const HomePage = ({ content, announcements }) => {
               <div className="grid grid-cols-2 gap-4">
                 {features.map((feature, index) => (
                   <Link key={feature.link} to={feature.link}>
-                    <Card 
+                    <Card
                       className="hover-lift cursor-pointer border-border/50 hover:border-primary/30"
                       data-testid={`quick-link-${feature.link.replace('/', '')}`}
                     >
@@ -72,7 +72,7 @@ const HomePage = ({ content, announcements }) => {
                       <h3 className="font-semibold text-foreground">{t('join.group')}</h3>
                       <p className="text-sm text-muted-foreground">{t('home.stayConnected')}</p>
                     </div>
-                    <a 
+                    <a
                       href={content?.whatsapp_group_link || '#'}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -90,7 +90,7 @@ const HomePage = ({ content, announcements }) => {
       </section>
 
       {/* Announcements Section */}
-      {announcements && announcements.filter(a => !a.is_banner && a.is_active).length > 0 && (
+      {Array.isArray(announcements) && announcements.filter(a => !a.is_banner && a.is_active).length > 0 && (
         <section className="py-16 md:py-24 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <h2 className="font-heading text-3xl md:text-4xl text-foreground font-semibold text-center mb-12">
@@ -98,15 +98,15 @@ const HomePage = ({ content, announcements }) => {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {announcements.filter(a => !a.is_banner && a.is_active).slice(0, 3).map((announcement) => (
-                <Card 
-                  key={announcement.id} 
+                <Card
+                  key={announcement.id}
                   className="hover-lift"
                   data-testid={`announcement-${announcement.id}`}
                 >
                   {announcement.image_url && (
                     <div className="h-48 overflow-hidden rounded-t-lg">
-                      <img 
-                        src={announcement.image_url} 
+                      <img
+                        src={announcement.image_url}
                         alt={getText(announcement.title)}
                         className="w-full h-full object-cover"
                       />

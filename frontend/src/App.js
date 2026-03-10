@@ -26,7 +26,7 @@ const API = `${BACKEND_URL}/api`;
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
   const { admin, loading } = useAuth();
-  
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -34,11 +34,11 @@ const ProtectedRoute = ({ children }) => {
       </div>
     );
   }
-  
+
   if (!admin) {
     return <Navigate to="/admin" replace />;
   }
-  
+
   return children;
 };
 
@@ -81,8 +81,8 @@ function AppContent() {
         axios.get(`${API}/content`),
         axios.get(`${API}/announcements`)
       ]);
-      setContent(contentRes.data);
-      setAnnouncements(announcementsRes.data);
+      setContent(contentRes.data && typeof contentRes.data === 'object' ? contentRes.data : null);
+      setAnnouncements(Array.isArray(announcementsRes.data) ? announcementsRes.data : []);
     } catch (error) {
       console.error('Failed to fetch content:', error);
     } finally {
@@ -141,13 +141,13 @@ function AppContent() {
             <DonatePage content={content} />
           </AppLayout>
         } />
-        
+
         {/* Admin Routes */}
         <Route path="/admin" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={
           <ProtectedRoute>
-            <AdminDashboard 
-              content={content} 
+            <AdminDashboard
+              content={content}
               setContent={setContent}
               announcements={announcements}
               setAnnouncements={setAnnouncements}

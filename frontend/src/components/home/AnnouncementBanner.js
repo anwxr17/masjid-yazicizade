@@ -7,14 +7,16 @@ const AnnouncementBanner = ({ announcements = [] }) => {
   const [dismissed, setDismissed] = useState(false);
   const { getText } = useLanguage();
 
-  const bannerAnnouncements = announcements.filter(a => a.is_banner && a.is_active);
-  
+  const bannerAnnouncements = Array.isArray(announcements)
+    ? announcements.filter(a => a.is_banner && a.is_active)
+    : [];
+
   if (dismissed || bannerAnnouncements.length === 0) return null;
 
   const announcement = bannerAnnouncements[0];
 
   return (
-    <div 
+    <div
       className="bg-accent text-accent-foreground relative overflow-hidden"
       data-testid="announcement-banner"
     >
