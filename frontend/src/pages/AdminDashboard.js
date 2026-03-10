@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { 
-  LayoutDashboard, FileText, Bell, Users, LogOut, Save, 
+import {
+  LayoutDashboard, FileText, Bell, Users, LogOut, Save,
   Upload, Trash2, Plus, Check, X, Image as ImageIcon
 } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -22,7 +22,7 @@ const AdminDashboard = ({ content, setContent, announcements, setAnnouncements, 
   const { t } = useLanguage();
   const { admin, logout, getAuthHeaders } = useAuth();
   const navigate = useNavigate();
-  
+
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
   const [localContent, setLocalContent] = useState(content || {});
@@ -40,18 +40,18 @@ const AdminDashboard = ({ content, setContent, announcements, setAnnouncements, 
     }
   }, [content]);
 
-  useEffect(() => {
-    fetchVolunteers();
-  }, []);
-
-  const fetchVolunteers = async () => {
+  const fetchVolunteers = React.useCallback(async () => {
     try {
       const response = await axios.get(`${API}/admin/volunteers`, getAuthHeaders());
       setVolunteers(response.data);
     } catch (err) {
       console.error('Failed to fetch volunteers:', err);
     }
-  };
+  }, [getAuthHeaders]);
+
+  useEffect(() => {
+    fetchVolunteers();
+  }, [fetchVolunteers]);
 
   const handleLogout = () => {
     logout();
@@ -87,7 +87,7 @@ const AdminDashboard = ({ content, setContent, announcements, setAnnouncements, 
           'Content-Type': 'multipart/form-data'
         }
       });
-      
+
       setLocalContent(prev => ({
         ...prev,
         [field]: response.data.url
@@ -153,9 +153,9 @@ const AdminDashboard = ({ content, setContent, announcements, setAnnouncements, 
             <span className="text-sm text-muted-foreground hidden md:block">
               {admin?.name || admin?.email}
             </span>
-            <Button 
-              variant="outline" 
-              size="sm" 
+            <Button
+              variant="outline"
+              size="sm"
               onClick={handleLogout}
               className="gap-2"
               data-testid="logout-btn"
@@ -189,7 +189,7 @@ const AdminDashboard = ({ content, setContent, announcements, setAnnouncements, 
           <TabsContent value="content" className="space-y-6">
             {/* Save Button */}
             <div className="flex justify-end">
-              <Button 
+              <Button
                 onClick={handleSaveContent}
                 disabled={saving}
                 className="gap-2"
@@ -411,9 +411,9 @@ const AdminDashboard = ({ content, setContent, announcements, setAnnouncements, 
                     </div>
                   ))}
                 </div>
-                
+
                 <Separator />
-                
+
                 <div className="space-y-4">
                   <Label>Gallery Images</Label>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -451,7 +451,7 @@ const AdminDashboard = ({ content, setContent, announcements, setAnnouncements, 
                       </div>
                     ))}
                   </div>
-                  
+
                   <div className="flex gap-4 items-end">
                     <div className="flex-1 space-y-2">
                       <Label>Add New Image (URL)</Label>
@@ -483,7 +483,7 @@ const AdminDashboard = ({ content, setContent, announcements, setAnnouncements, 
                       Add Image
                     </Button>
                   </div>
-                  
+
                   <p className="text-xs text-muted-foreground">
                     Tip: Upload images via the Upload button or paste URLs directly. Click Save Changes to apply.
                   </p>
