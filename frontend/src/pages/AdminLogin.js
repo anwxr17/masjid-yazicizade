@@ -13,7 +13,7 @@ const AdminLogin = () => {
   const { t } = useLanguage();
   const { login } = useAuth();
   const navigate = useNavigate();
-  
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -35,7 +35,7 @@ const AdminLogin = () => {
   };
 
   return (
-    <div 
+    <div
       className="min-h-screen flex items-center justify-center py-12 px-4 bg-muted/30"
       data-testid="admin-login-page"
     >
@@ -91,8 +91,8 @@ const AdminLogin = () => {
               </div>
             </div>
 
-            <Button 
-              type="submit" 
+            <Button
+              type="submit"
               className="w-full gap-2"
               disabled={loading}
               data-testid="login-submit"
@@ -108,9 +108,6 @@ const AdminLogin = () => {
             </Button>
           </form>
 
-          <p className="text-center text-xs text-muted-foreground mt-6">
-            Default: admin@roadtojannah.com / admin123
-          </p>
         </CardContent>
       </Card>
     </div>
