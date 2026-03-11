@@ -98,9 +98,11 @@ function AppContent() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-background">
         <div className="text-center">
-          <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center mx-auto mb-4 animate-pulse">
-            <span className="text-primary-foreground font-heading text-2xl">ر</span>
-          </div>
+          <img 
+            src="https://static.prod-images.emergentagent.com/jobs/ba30d0f2-df1d-4802-8a15-10d3345f1077/images/c3832bf4697dac24bfcdc88fc5f126d8bff64518e1c99ca3b00b32e5c34dc42d.png" 
+            alt="Road to Jannah" 
+            className="w-16 h-16 mx-auto mb-4 animate-pulse"
+          />
           <p className="text-muted-foreground">Loading roadtojannah...</p>
         </div>
       </div>

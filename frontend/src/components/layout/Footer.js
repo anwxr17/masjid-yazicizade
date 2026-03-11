@@ -118,17 +118,10 @@ const Footer = ({ content }) => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-primary-foreground/20 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-12 pt-8 border-t border-primary-foreground/20 flex flex-col md:flex-row items-center justify-center gap-4">
           <p className="text-primary-foreground/60 text-sm">
             © roadtojannah {currentYear}. {t('footer.rights')}.
           </p>
-          <Link
-            to="/admin"
-            className="text-primary-foreground/40 hover:text-primary-foreground/60 text-xs transition-colors"
-            data-testid="footer-admin-link"
-          >
-            {t('nav.admin')}
-          </Link>
         </div>
       </div>
     </footer>
