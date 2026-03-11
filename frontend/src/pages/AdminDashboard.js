@@ -414,23 +414,48 @@ const AdminDashboard = ({ content, setContent, announcements, setAnnouncements, 
                   Last 10 Nights Announcement
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-6">
                 <p className="text-sm text-muted-foreground">
-                  This message will appear in the "Last 10 Nights" section on the Schedule page.
+                  This section appears on the Schedule page in the "Last 10 Nights" area.
                 </p>
-                <div className="grid md:grid-cols-3 gap-4">
-                  {['en', 'ar', 'tr'].map(lang => (
-                    <div key={lang} className="space-y-2">
-                      <Label>Announcement ({lang.toUpperCase()})</Label>
-                      <Textarea
-                        value={localContent.last_10_nights_announcement?.[lang] || ''}
-                        onChange={(e) => updateNestedContent('last_10_nights_announcement', lang, e.target.value)}
-                        rows={3}
-                        placeholder={lang === 'en' ? 'We are going to have a delicious suhoor after tahajjud!' : ''}
-                        data-testid={`last10-announcement-${lang}`}
-                      />
-                    </div>
-                  ))}
+                
+                {/* Title */}
+                <div>
+                  <Label className="text-base font-semibold mb-3 block">Title (e.g., "Special Programs" or "Special Programs Coming Soon")</Label>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    {['en', 'ar', 'tr'].map(lang => (
+                      <div key={lang} className="space-y-2">
+                        <Label>Title ({lang.toUpperCase()})</Label>
+                        <Input
+                          value={localContent.last_10_nights_title?.[lang] || ''}
+                          onChange={(e) => updateNestedContent('last_10_nights_title', lang, e.target.value)}
+                          placeholder={lang === 'en' ? 'Special Programs' : ''}
+                          data-testid={`last10-title-${lang}`}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <Separator />
+
+                {/* Announcement */}
+                <div>
+                  <Label className="text-base font-semibold mb-3 block">Announcement Message</Label>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    {['en', 'ar', 'tr'].map(lang => (
+                      <div key={lang} className="space-y-2">
+                        <Label>Announcement ({lang.toUpperCase()})</Label>
+                        <Textarea
+                          value={localContent.last_10_nights_announcement?.[lang] || ''}
+                          onChange={(e) => updateNestedContent('last_10_nights_announcement', lang, e.target.value)}
+                          rows={3}
+                          placeholder={lang === 'en' ? 'We are going to have a delicious suhoor after tahajjud!' : ''}
+                          data-testid={`last10-announcement-${lang}`}
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </CardContent>
             </Card>

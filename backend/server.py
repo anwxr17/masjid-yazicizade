@@ -264,6 +264,11 @@ class SiteContent(BaseModel):
     # Schedule
     schedule_days: List[ScheduleDay] = Field(default_factory=list)
     last_10_nights: List[Last10Night] = Field(default_factory=list)
+    last_10_nights_title: Translation = Field(default_factory=lambda: Translation(
+        en="Special Programs",
+        ar="البرامج الخاصة",
+        tr="Özel Programlar"
+    ))
     last_10_nights_announcement: Translation = Field(default_factory=lambda: Translation(
         en="We are going to have a delicious suhoor after tahajjud!",
         ar="سنقدم سحورًا لذيذًا بعد صلاة التهجد!",

@@ -154,7 +154,7 @@ const SchedulePage = ({ content }) => {
               <CardContent className="py-12 text-center">
                 <Star className="h-12 w-12 text-accent mx-auto mb-4" />
                 <h3 className="font-heading text-xl font-semibold text-foreground mb-2">
-                  {t('schedule.specialPrograms')}
+                  {getText(content?.last_10_nights_title) || t('schedule.specialPrograms')}
                 </h3>
                 <p className="text-muted-foreground">
                   {getText(content?.last_10_nights_announcement) || t('schedule.specialProgramsDesc')}
