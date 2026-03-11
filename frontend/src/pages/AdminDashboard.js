@@ -406,6 +406,35 @@ const AdminDashboard = ({ content, setContent, announcements, setAnnouncements, 
               </CardContent>
             </Card>
 
+            {/* Last 10 Nights Announcement */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Bell className="h-5 w-5" />
+                  Last 10 Nights Announcement
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-sm text-muted-foreground">
+                  This message will appear in the "Last 10 Nights" section on the Schedule page.
+                </p>
+                <div className="grid md:grid-cols-3 gap-4">
+                  {['en', 'ar', 'tr'].map(lang => (
+                    <div key={lang} className="space-y-2">
+                      <Label>Announcement ({lang.toUpperCase()})</Label>
+                      <Textarea
+                        value={localContent.last_10_nights_announcement?.[lang] || ''}
+                        onChange={(e) => updateNestedContent('last_10_nights_announcement', lang, e.target.value)}
+                        rows={3}
+                        placeholder={lang === 'en' ? 'We are going to have a delicious suhoor after tahajjud!' : ''}
+                        data-testid={`last10-announcement-${lang}`}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
             {/* Masjid Gallery */}
             <Card>
               <CardHeader>

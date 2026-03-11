@@ -157,7 +157,7 @@ const SchedulePage = ({ content }) => {
                   {t('schedule.specialPrograms')}
                 </h3>
                 <p className="text-muted-foreground">
-                  {t('schedule.specialProgramsDesc')}
+                  {getText(content?.last_10_nights_announcement) || t('schedule.specialProgramsDesc')}
                 </p>
               </CardContent>
             </Card>
